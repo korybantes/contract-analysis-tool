@@ -63,6 +63,8 @@ app.use("/auth", authRoute);
 app.use("/contracts", contractsRoute);
 app.use("/payments", paymentsRoute);
 
+app.set("trust proxy", 1);
+
 const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
